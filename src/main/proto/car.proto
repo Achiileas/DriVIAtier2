@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "sep3.drivia.grpc";
+option csharp_namespace = "CarProto";
+
+package drivia;
+
+service CarService {
+  rpc GetAllCars (GetAllCarsRequest) returns (CarList);
+}
+
+message GetAllCarsRequest {}
+
+message Car {
+  int32 id = 1;
+  string model = 2;
+  string category = 3;
+  string location = 4;
+}
+
+message CarList {
+  repeated Car cars = 1;
+}
