@@ -5,5 +5,4 @@ public record CarResponse(
     String model,
     String category,
     String location
-) {
-}
+) {}
